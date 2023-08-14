@@ -7,10 +7,10 @@ body {
 
 /* Estilos del encabezado */
 header.index {
-    background-image: url('img/Ghost of Tsushima (PS4 2020) wallpaper.jpg'); /* Ruta de la imagen de fondo */
+    background-image:linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('img/Ghost of Tsushima (PS4 2020) wallpaper.jpg'); 
     background-size: cover;
     background-position: center;
-    color: rgb(143, 130, 158);
+    color: rgb(154, 142, 168);
     text-align: center;
     padding: 180px 0;
     font-size: 34px;
@@ -31,12 +31,13 @@ ul.categories li {
 }
 
 header.accion {
-    background-image: url('img/Ghost of Tsushima (PS4 2020) wallpaper.jpg'); /* Ruta de la imagen de fondo */
+    background-image:linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('img/Ghost of Tsushima (PS4 2020) wallpaper.jpg'); 
     background-size: cover;
     background-position: center;
-    color: orange;
+    color: rgb(154, 142, 168);
     text-align: center;
-    padding: 160px 0;
+    padding: 180px 0;
+    font-size: 34px;
 }
 
 /* Estilos de cada categoría */
@@ -68,7 +69,7 @@ header.accion {
     height: 250px;
     display: flex;
     align-items: flex-end;
-    justify-content: center; /* Centra horizontalmente */
+    justify-content: center; 
     padding: 10px;
     color: white;
     font-weight: bold;
@@ -78,7 +79,7 @@ header.accion {
 
 /* Estilos para el texto "Acción" */
 .category-accion a {
-    margin: 0; /* Quita el margen por defecto del enlace */
+    margin: 0; 
 }
 
 .category-aventura {
@@ -89,7 +90,7 @@ header.accion {
     height: 250px;
     display: flex;
     align-items: flex-end;
-    justify-content: center; /* Centra horizontalmente */
+    justify-content: center; 
     padding: 10px;
     color: white;
     font-weight: bold;
@@ -98,7 +99,7 @@ header.accion {
 }
 .category-aventura a {
 
-    margin: 0; /* Quita el margen por defecto del enlace */
+    margin: 0; 
 }
 
 .category-terror {
@@ -109,7 +110,7 @@ header.accion {
     height: 250px;
     display: flex;
     align-items: flex-end;
-    justify-content: center; /* Centra horizontalmente */
+    justify-content: center; 
     padding: 10px;
     color: white;
     font-weight: bold;
@@ -118,7 +119,7 @@ header.accion {
 }
 .category-terror a {
     
-    margin: 0; /* Quita el margen por defecto del enlace */
+    margin: 0; 
 }
 
 .category-carreras {
@@ -129,7 +130,7 @@ header.accion {
     height: 250px;
     display: flex;
     align-items: flex-end;
-    justify-content: center; /* Centra horizontalmente */
+    justify-content: center; 
     padding: 10px;
     color: white;
     font-weight: bold;
@@ -138,7 +139,7 @@ header.accion {
 }
 .category-carreras a {
     
-    margin: 0; /* Quita el margen por defecto del enlace */
+    margin: 0; 
 }
 
 .category-supervivencia {
@@ -149,7 +150,7 @@ header.accion {
     height: 250px;
     display: flex;
     align-items: flex-end;
-    justify-content: center; /* Centra horizontalmente */
+    justify-content: center; 
     padding: 10px;
     color: white;
     font-weight: bold;
@@ -158,7 +159,7 @@ header.accion {
 }
 .category-supervivencia a {
     
-    margin: 0; /* Quita el margen por defecto del enlace */
+    margin: 0; 
 }
 
 ul.juegos {
@@ -166,8 +167,9 @@ ul.juegos {
     display: flex;
     justify-content: center;
     background-color: rgba(199, 201, 201, 0.699);
-    padding: 100px 0;
+    padding: 130px 0;
     margin: 0;
+    gap: 3rem;
 }
 
 ul.juegos li {
@@ -180,8 +182,8 @@ ul.juegos li {
     height: 250px;
     display: flex;
     align-items: flex-end;
-    justify-content: center; /* Centra horizontalmente */
-    padding: 10px;
+    justify-content: center; 
+    padding: 0px;
     color: white;
     font-weight: bold;
     border-radius: 10px;
@@ -190,7 +192,7 @@ ul.juegos li {
 
 /* Cambia el selector de los enlaces de los juegos individuales */
 .juego-item a {
-    margin: 0; /* Quita el margen por defecto del enlace */
+    margin: 0; 
 }
 
 /* Estilos para los enlaces de categoría */
@@ -206,7 +208,7 @@ ul.juegos li {
     height: 250px;
     display: flex;
     align-items: flex-end;
-    justify-content: center; /* Centra horizontalmente */
+    justify-content: center; 
     padding: 10px;
     color: white;
     font-weight: bold;
@@ -215,7 +217,7 @@ ul.juegos li {
 }
 .juegos-accionjuego1 a {
     
-    margin: 0; /* Quita el margen por defecto del enlace */
+    margin: 0; 
 }
 
 .juegos-accionjuego2 {
@@ -226,7 +228,7 @@ ul.juegos li {
     height: 250px;
     display: flex;
     align-items: flex-end;
-    justify-content: center; /* Centra horizontalmente */
+    justify-content: center; 
     padding: 10px;
     color: white;
     font-weight: bold;
@@ -235,7 +237,86 @@ ul.juegos li {
 }
 .juegos-accionjuego2 a {
     
-    margin: 0; /* Quita el margen por defecto del enlace */
+    margin: 0; 
+}
+.juegos-aventurajuego1 {
+    background-image: url('img/aventurajuego2.jpeg');
+    background-size: cover;
+    background-position: center;
+    width: 300px;
+    height: 250px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center; 
+    padding: 10px;
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    margin: 10px;
+}
+.juegos-aventurajuego1 a {
+    
+    margin: 0; 
+}
+
+.juegos-aventurajuego2 {
+    background-image: url('img/aventurajuego1.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 300px;
+    height: 250px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center; 
+    padding: 10px;
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    margin: 10px;
+}
+.juegos-aventurajuego2 a {
+    
+    margin: 0; 
+}
+
+.juegos-terrorjuego1 {
+    background-image: url('img/terrorjuego1.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 300px;
+    height: 250px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center; 
+    padding: 10px;
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    margin: 10px;
+}
+.juegos-terrorjuego1 a {
+    
+    margin: 0; 
+}
+
+.juegos-terrorjuego2 {
+    background-image: url('img/terrorjuego2.png');
+    background-size: cover;
+    background-position: center;
+    width: 300px;
+    height: 250px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center; 
+    padding: 10px;
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    margin: 10px;
+}
+.juegos-terrorjuego2 a {
+    
+    margin: 0; 
 }
 
 /* Estilos para el cuadro de información del juego */
@@ -244,7 +325,7 @@ ul.juegos li {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    margin-top: 10px; /* Margen superior para separar del cuadro de imagen */
+    margin-top: 10px; 
 }
 
 .juego-image {
@@ -258,10 +339,10 @@ ul.juegos li {
 .juego-text {
     background-color: rgba(0, 0, 0, 0.8);
     color: white;
-    padding: 10px;
+    
     width: 100%;
     border-radius: 0 0 10px 10px;
-    margin-top: 10px;
+   
 }
 
 
