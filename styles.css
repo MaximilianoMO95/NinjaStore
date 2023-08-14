@@ -1,0 +1,274 @@
+/* Estilos generales */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Estilos del encabezado */
+header.index {
+    background-image: url('img/Ghost of Tsushima (PS4 2020) wallpaper.jpg'); /* Ruta de la imagen de fondo */
+    background-size: cover;
+    background-position: center;
+    color: rgb(143, 130, 158);
+    text-align: center;
+    padding: 180px 0;
+    font-size: 34px;
+}
+
+/* Estilos de la lista de categorías */
+ul.categories {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(199, 201, 201, 0.699);
+    padding: 200px 0;
+    margin: 0;
+}
+
+ul.categories li {
+    margin: 0 10px;
+}
+
+header.accion {
+    background-image: url('img/Ghost of Tsushima (PS4 2020) wallpaper.jpg'); /* Ruta de la imagen de fondo */
+    background-size: cover;
+    background-position: center;
+    color: orange;
+    text-align: center;
+    padding: 160px 0;
+}
+
+/* Estilos de cada categoría */
+.category {
+    background-size: cover;
+    background-position: center;
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    display: flex;
+    align-items: flex-end;
+    padding: 10px;
+    color: white;
+    font-weight: bold;
+}
+
+/* Estilos para los enlaces de categoría */
+.category-link {
+    text-decoration: none;
+    color: white;
+}
+
+/* Estilos específicos para cada categoría */
+.category-accion {
+    background-image: url('img/JohnWick.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 300px;
+    height: 250px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center; /* Centra horizontalmente */
+    padding: 10px;
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+/* Estilos para el texto "Acción" */
+.category-accion a {
+    margin: 0; /* Quita el margen por defecto del enlace */
+}
+
+.category-aventura {
+    background-image: url('img/aventura.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 300px;
+    height: 250px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center; /* Centra horizontalmente */
+    padding: 10px;
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    margin: 10px;
+}
+.category-aventura a {
+
+    margin: 0; /* Quita el margen por defecto del enlace */
+}
+
+.category-terror {
+    background-image: url('img/terror.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 300px;
+    height: 250px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center; /* Centra horizontalmente */
+    padding: 10px;
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    margin: 10px;
+}
+.category-terror a {
+    
+    margin: 0; /* Quita el margen por defecto del enlace */
+}
+
+.category-carreras {
+    background-image: url('img/carreras.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 300px;
+    height: 250px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center; /* Centra horizontalmente */
+    padding: 10px;
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    margin: 10px;
+}
+.category-carreras a {
+    
+    margin: 0; /* Quita el margen por defecto del enlace */
+}
+
+.category-supervivencia {
+    background-image: url('img/supervivencia.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 300px;
+    height: 250px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center; /* Centra horizontalmente */
+    padding: 10px;
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    margin: 10px;
+}
+.category-supervivencia a {
+    
+    margin: 0; /* Quita el margen por defecto del enlace */
+}
+
+ul.juegos {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(199, 201, 201, 0.699);
+    padding: 100px 0;
+    margin: 0;
+}
+
+ul.juegos li {
+    margin: 0 10px;
+}
+.juego-item {
+    background-size: cover;
+    background-position: center;
+    width: 300px;
+    height: 250px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center; /* Centra horizontalmente */
+    padding: 10px;
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+/* Cambia el selector de los enlaces de los juegos individuales */
+.juego-item a {
+    margin: 0; /* Quita el margen por defecto del enlace */
+}
+
+/* Estilos para los enlaces de categoría */
+.juegos-link {
+    text-decoration: none;
+    color: white;
+}
+.juegos-accionjuego1 {
+    background-image: url('img/accionjuego1.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 300px;
+    height: 250px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center; /* Centra horizontalmente */
+    padding: 10px;
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    margin: 10px;
+}
+.juegos-accionjuego1 a {
+    
+    margin: 0; /* Quita el margen por defecto del enlace */
+}
+
+.juegos-accionjuego2 {
+    background-image: url('img/accionjuego2.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 300px;
+    height: 250px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center; /* Centra horizontalmente */
+    padding: 10px;
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    margin: 10px;
+}
+.juegos-accionjuego2 a {
+    
+    margin: 0; /* Quita el margen por defecto del enlace */
+}
+
+/* Estilos para el cuadro de información del juego */
+.juego-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 10px; /* Margen superior para separar del cuadro de imagen */
+}
+
+.juego-image {
+    background-size: cover;
+    background-position: center;
+    width: 300px;
+    height: 250px;
+    border-radius: 10px 10px 0 0;
+}
+
+.juego-text {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 10px;
+    width: 100%;
+    border-radius: 0 0 10px 10px;
+    margin-top: 10px;
+}
+
+
+
+/* Estilos de pie de página */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #111111;
+}
