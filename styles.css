@@ -200,124 +200,6 @@ ul.juegos li {
     text-decoration: none;
     color: white;
 }
-.juegos-accionjuego1 {
-    background-image: url('img/accionjuego1.jpg');
-    background-size: cover;
-    background-position: center;
-    width: 300px;
-    height: 250px;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center; 
-    padding: 10px;
-    color: white;
-    font-weight: bold;
-    border-radius: 10px;
-    margin: 10px;
-}
-.juegos-accionjuego1 a {
-    
-    margin: 0; 
-}
-
-.juegos-accionjuego2 {
-    background-image: url('img/accionjuego2.jpg');
-    background-size: cover;
-    background-position: center;
-    width: 300px;
-    height: 250px;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center; 
-    padding: 10px;
-    color: white;
-    font-weight: bold;
-    border-radius: 10px;
-    margin: 10px;
-}
-.juegos-accionjuego2 a {
-    
-    margin: 0; 
-}
-.juegos-aventurajuego1 {
-    background-image: url('img/aventurajuego2.jpeg');
-    background-size: cover;
-    background-position: center;
-    width: 300px;
-    height: 250px;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center; 
-    padding: 10px;
-    color: white;
-    font-weight: bold;
-    border-radius: 10px;
-    margin: 10px;
-}
-.juegos-aventurajuego1 a {
-    
-    margin: 0; 
-}
-
-.juegos-aventurajuego2 {
-    background-image: url('img/aventurajuego1.jpg');
-    background-size: cover;
-    background-position: center;
-    width: 300px;
-    height: 250px;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center; 
-    padding: 10px;
-    color: white;
-    font-weight: bold;
-    border-radius: 10px;
-    margin: 10px;
-}
-.juegos-aventurajuego2 a {
-    
-    margin: 0; 
-}
-
-.juegos-terrorjuego1 {
-    background-image: url('img/terrorjuego1.jpg');
-    background-size: cover;
-    background-position: center;
-    width: 300px;
-    height: 250px;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center; 
-    padding: 10px;
-    color: white;
-    font-weight: bold;
-    border-radius: 10px;
-    margin: 10px;
-}
-.juegos-terrorjuego1 a {
-    
-    margin: 0; 
-}
-
-.juegos-terrorjuego2 {
-    background-image: url('img/terrorjuego2.png');
-    background-size: cover;
-    background-position: center;
-    width: 300px;
-    height: 250px;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center; 
-    padding: 10px;
-    color: white;
-    font-weight: bold;
-    border-radius: 10px;
-    margin: 10px;
-}
-.juegos-terrorjuego2 a {
-    
-    margin: 0; 
-}
 
 /* Estilos para el cuadro de información del juego */
 .juego-content {
@@ -338,12 +220,12 @@ a {
 }
 
 .juego-content > img {
-    position: absolute;
+    display: flex;
     border-radius: 1rem;
-    top: 0;
-    width: 300px;
-    height: 250px;
-    object-fit: cover; 
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
     z-index: 0;
 }
 
