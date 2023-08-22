@@ -1,19 +1,208 @@
-/* Estilos generales */
-body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
+/************ Estilos generales ************/
+:root {
+  --bg-1: hsl(0, 0%, 100%);
+  --bg-2: hsl(206, 20%, 95%);
+  --bg-3: hsl(206, 20%, 85%);
+  --fg-1: hsl(0, 0%, 13%);
+  --fg-2: hsl(0, 0%, 20%);
+  --fg-3: hsl(170, 68%, 36%);
+  --link: hsl(208, 77%, 47%);
+  --link-hover: hsl(208, 77%, 55%);
+  --link-active: hsl(208, 77%, 40%);
+  --border-radius: 4px;
+  --font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
+    'Open Sans', 'Helvetica Neue', sans-serif;
+  --font-mono: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'JetBrains Mono',
+    'DejaVu Sans Mono', monospace;
+  background: var(--bg-1);
+  color: var(--fg-1);
+  font-family: var(--font);
+  line-height: 1.5;
+  margin: 1rem;
+  height: calc(100vh - 2rem);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+div, header, main, footer, body, section {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-variant-numeric: tabular-nums;
+  line-height: 1.1;
+}
+
+:is(h1, h2, h3, h4, h5, h6, p) {
+  margin: 1rem 0.1rem;
+}
+
+label {
+  margin: 0.5rem 0.1rem;
+}
+
+:is(h1, h2, h3, h4, h5, h6, p, label):first-child {
+  margin-top: 0;
+}
+
+:is(h1, h2, h3, h4, h5, h6, p, label):last-child {
+  margin-bottom: 0;
+}
+
+a {
+  color: var(--link);
+}
+
+a:hover {
+  color: var(--link-hover);
+}
+
+a:active {
+  color: var(--link-active);
+}
+
+label {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+label input {
+  margin: 0;
+}
+
+button,
+input,
+select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+button {
+  background: var(--link);
+  color: var(--bg-1);
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: var(--border-radius);
+}
+
+button:hover {
+  background: var(--link-hover);
+}
+
+button:active {
+  background: var(--link-active);
+}
+
+:is(button, button:hover, button:active):disabled {
+  background: var(--link);
+  filter: grayscale(1);
+  opacity: 0.4;
+}
+
+input,
+textarea,
+select {
+  padding: 0.5rem;
+  border: 2px solid var(--bg-2);
+  border-radius: var(--border-radius);
+  box-sizing: border-box;
+}
+
+input:is([type="email"], [type="text"], [type="password"]) {
+  border: 0;
+  border-radius: 0;
+  border-left: 2px solid var(--fg-2);
+}
+
+input:is([type="submit"], [type="reset"]):hover {
+  border-color: var(--link-hover);
+  color: var(--link);
+}
+
+input,
+textarea {
+  background: var(--bg-1);
+  color: var(--fg-1);
+}
+
+select:not([multiple]) {
+  background: var(--bg-2);
+}
+
+.container {
+  display: flex;
+  padding: 2rem;
+  flex-direction: column;
+  align-items: center;
+
+  width: 100%;
+  height: auto;
+}
+
+.border {
+  border-radius: 0.3rem;
+  border: 2px solid var(--bg-2);
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+
+  width: 100%;
+}
+
+.error {
+  color: red;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-1: hsl(0, 0%, 6%);
+    --bg-2: hsl(0, 0%, 12%);
+    --bg-3: hsl(0, 0%, 17%);
+    --fg-1: hsl(0, 0%, 90%);
+    --fg-2: hsl(0, 0%, 70%);
+    --fg-3: hsl(171, 68%, 67%);
+    --link: hsl(206, 96%, 72%);
+    --link-hover: hsl(206, 96%, 78%);
+    --link-active: hsl(206, 96%, 64%);
+  }
 }
 
 /* Estilos del encabezado */
-header.index {
-    background-image:linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('img/Ghost of Tsushima (PS4 2020) wallpaper.jpg'); 
+.banner {
+    display: flex;
+    background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 1)), url('img/Ghost of Tsushima (PS4 2020) wallpaper.jpg'); 
     background-size: cover;
     background-position: center;
-    color: rgb(154, 142, 168);
-    text-align: center;
-    padding: 180px 0;
-    font-size: 34px;
+
+    border: 0;
+    border-radius: 0.8rem;
+    color: #B89FD6;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: bolder;
+
+    height: 50vh;
+    width: 100%;
+}
+
+.banner-img {
+    background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 1)), url('img/Ghost of Tsushima (PS4 2020) wallpaper.jpg'); 
+    background-size: contain;
+    background-position: center;
 }
 
 /* Estilos de la lista de categorías */
@@ -21,23 +210,13 @@ ul.categories {
     list-style: none;
     display: flex;
     justify-content: center;
-    background-color: rgba(199, 201, 201, 0.699);
+    background-color: var(--bg-1);
     padding: 200px 0;
     margin: 0;
 }
 
 ul.categories li {
     margin: 0 10px;
-}
-
-header.accion {
-    background-image:linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('img/Ghost of Tsushima (PS4 2020) wallpaper.jpg'); 
-    background-size: cover;
-    background-position: center;
-    color: rgb(154, 142, 168);
-    text-align: center;
-    padding: 180px 0;
-    font-size: 34px;
 }
 
 /* Estilos de cada categoría */
@@ -58,6 +237,10 @@ header.accion {
 .category-link {
     text-decoration: none;
     color: white;
+}
+
+.category-link:hover {
+  transform: scale(1.2);
 }
 
 /* Estilos específicos para cada categoría */
@@ -98,7 +281,6 @@ header.accion {
     margin: 10px;
 }
 .category-aventura a {
-
     margin: 0; 
 }
 
@@ -166,7 +348,6 @@ ul.juegos {
     list-style: none;
     display: flex;
     justify-content: center;
-    background-color: rgba(199, 201, 201, 0.699);
     padding: 130px 0;
     margin: 0;
     gap: 3rem;
@@ -175,6 +356,7 @@ ul.juegos {
 ul.juegos li {
     margin: 0 10px;
 }
+
 .juego-item {
     background-size: cover;
     background-position: center;
@@ -195,6 +377,10 @@ ul.juegos li {
     margin: 0; 
 }
 
+.juego-item a:hover {
+  transform: scale(1.1);
+}
+
 /* Estilos para los enlaces de categoría */
 .juegos-link {
     text-decoration: none;
@@ -208,7 +394,6 @@ ul.juegos li {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: 0;
     width: 300px;
     height: 250px;
 }
@@ -242,6 +427,7 @@ a {
     background-color: rgba(0, 0, 0, 0.8);
     color: white;
     width: 100%;
+    padding: 1rem;
     bottom: 0;
     border-radius: 0 0 10px 10px;
     z-index: 1;

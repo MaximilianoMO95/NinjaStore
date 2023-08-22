@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>Registrarse</title>
+
+        <style>
+                form {
+                        display: flex;
+                        flex-direction: column;
+                        width: 80%;
+                        gap: 1rem;
+                }
+        </style>
+</head>
+
+<body>
+        <main>
+                <div class="container border">
+                        <h1> Registrate </h1>
+
+                        <form id="registration-form">
+                                <label for="full-name">Nombre Completo:</label>
+                                <input type="text" id="full-name" name="full-name" required>
+
+                                <label for="username">Nombre De Usuario:</label>
+                                <input type="text" id="username" name="username" required>
+
+                                <label for="email">Email:</label>
+                                <input type="email" id="email" name="email" required>
+
+                                <label for="password">Contraseña:</label>
+                                <input type="password" id="password" name="password" minlength="6" maxlength="18"
+                                        required>
+
+                                <label for="confirm-password">Confirmar Contraseña:</label>
+                                <input type="password" id="confirm-password" name="confirm-password" minlength="6" maxlength="18" required>
+
+                                <label for="birthdate">Fecha De Nacimiento:</label>
+                                <input type="date" id="birthdate" name="birthdate" required>
+
+
+                                <label for="shipping-address">Direccion de envio:</label>
+                                <input type="text" id="shipping-address" name="shipping-address" required>
+
+                                <br>
+                                <input type="submit" value="Registrarse">
+                                <input type="reset" value="Clear">
+                        </form>
+                </div>
+        </main>
+
+        <script>
+                const birthdateInput = document.getElementById('birthdate');
+
+                birthdateInput.addEventListener('input', function () {
+                        const selectedDate = new Date(this.value);
+                        const currentDate = new Date();
+                        const minDate = new Date();
+                        const minAge = 13;
+
+                        minDate.setFullYear(currentDate.getFullYear() - minAge);
+
+                        if (selectedDate > currentDate) {
+                                this.setCustomValidity('Fecha Invalida.');
+                        } else if (selectedDate > minDate) {
+                                this.setCustomValidity(`Debe Ser Mayor De ${minAge} Años.`);
+                        } else {
+                                this.setCustomValidity('');
+                        }
+                });
+        </script>
+</body>
+
+</html>
