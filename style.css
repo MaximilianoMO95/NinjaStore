@@ -26,8 +26,9 @@ html {
   scroll-behavior: smooth;
 }
 
-nav, div, header, main, footer, body, section {
+ul, nav, div, header, main, footer, body, section {
   box-sizing: border-box;
+  padding: 0;
   margin: 0;
 }
 
@@ -57,6 +58,9 @@ label {
 :is(h1, h2, h3, h4, h5, h6, p, label):last-child {
   margin-bottom: 0;
 }
+
+h1 { font-size: 2rem; }
+h2 { font-size: 1.5rem; }
 
 a {
   color: var(--link);
@@ -191,6 +195,16 @@ footer > a {
   }
 }
 
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.25rem;
+    }
+}
+
 /********** Estilos del encabezado **********/
 .banner {
   display: flex;
@@ -201,13 +215,18 @@ footer > a {
   border: 0;
   border-radius: 0.8rem;
   color: #B89FD6;
+  gap: 2rem;
   align-items: center;
   justify-content: center;
-  font-size: 2rem;
   font-weight: bolder;
 
   height: 50vh;
   width: 100%;
+}
+
+.banner > h1 {
+  letter-spacing: 0.69rem;
+  text-align: center;
 }
 
 .banner-img {
@@ -224,19 +243,21 @@ nav.cards {
     margin: 2rem 0;
     justify-content: center;
     padding: 1rem;
+
     width: 100%;
 }
 
 nav.cards > ul {
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    gap: inherit;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: inherit;
 }
 
 nav.cards > ul > li {
   display: flex;
-  flex: 1;
   color: white;
   font-weight: bold;
   align-items: center;
@@ -255,8 +276,9 @@ nav.cards > ul > li {
   justify-content: center;
   align-items: flex-end;
   font-weight: bold;
-  color: white;
+  color: #FFFFFF;
   transition: transform 0.3s;
+  filter: opacity(0.8);
 
   width: 100%;
   height: 100%;
@@ -264,95 +286,62 @@ nav.cards > ul > li {
 
 .card-link:hover {
   transform: scale(1.15);
+  filter: opacity(1);
 }
 
 /******** Estilos Lista De Juegos *************/
-ul.juegos {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    padding: 130px 0;
-    margin: 0;
-    gap: 3rem;
+ul.games-list {
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin: 3rem 0;
+
+  width: 100%;
+  height: auto;
 }
 
-ul.juegos li {
-    margin: 0 10px;
+ul.games-list > li {
+  display: flex;
+  background-size: cover;
+  background-position: center;
+  align-items: flex-end;
+  justify-content: center; 
+  color: white;
+  font-weight: bold;
+  border-radius: 10px;
+
+  width: 300px;
+  height: 250px;
 }
 
-.juego-item {
-    background-size: cover;
-    background-position: center;
-    width: 300px;
-    height: 250px;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center; 
-    padding: 0px;
-    color: white;
-    font-weight: bold;
-    border-radius: 10px;
-    margin: 10px;
+ul.games-list .card-link {
+  position: relative;
 }
 
-/* Cambia el selector de los enlaces de los juegos individuales */
-.juego-item a {
-    margin: 0; 
-}
+ul.games-list .card-link > img {
+  position: absolute;
+  border-radius: 1rem;
+  object-fit: cover;
+  object-position: center;
+  top: 0;
 
-.juego-item a:hover {
-  transform: scale(1.1);
-}
-
-/* Estilos para los enlaces de categoría */
-.juegos-link {
-    text-decoration: none;
-    color: white;
-}
-
-/* Estilos para el cuadro de información del juego */
-.juego-content {
-    display: flex;
-    position: relative;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    width: 300px;
-    height: 250px;
-}
-
-a {
-    margin: 0;
-    padding: 0;
-    box-sizing: content-box;
-}
-
-.juego-content > img {
-    display: flex;
-    border-radius: 1rem;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    z-index: 0;
-}
-
-.juego-image {
-    background-size: cover;
-    background-position: center;
-    width: 300px;
-    height: 250px;
-    border-radius: 10px 10px 0 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
 }
 
 .juego-text {
-    position: absolute;
-    background-color: rgba(0, 0, 0, 0.8);
-    color: white;
-    width: 100%;
-    padding: 1rem;
-    bottom: 0;
-    border-radius: 0 0 10px 10px;
-    z-index: 1;
-}
+  position: absolute;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #EEEEEE;
+  padding: 0.69rem;
+  border-radius: 0 0 10px 10px;
+  bottom: 0;
 
+  width: 100%;
+  z-index: 1;
+}
