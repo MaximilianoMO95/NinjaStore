@@ -17,6 +17,13 @@
             display: flex;
             flex-direction: column;
         }
+
+        /* Fondos links categorias */
+        .category-accion        { background-image: url('img/JohnWick.jpg'); }
+        .category-aventura      { background-image: url('img/aventura.jpg'); }
+        .category-terror        { background-image: url('img/terror.jpg'); }
+        .category-carreras      { background-image: url('img/carreras.jpg'); }
+        .category-supervivencia { background-image: url('img/supervivencia.jpg'); }
     </style>
 </head>
 <body>
@@ -25,13 +32,17 @@
         <a class="registration-link" href="registrar.html">Registrate</a>
     </header>
     
-    <ul class="categories">
-        <li class="category"><a href="accion.html" class="category-link category-accion">Acción</a></li>
-        <li class="category"><a href="aventura.html" class="category-link category-aventura">Aventura</a></li>
-        <li class="category"><a href="terror.html" class="category-link category-terror">Terror</a></li>
-        <li class="category"><a href="carreras.html" class="category-link category-carreras">Carreras</a></li>
-        <li class="category"><a href="supervivencia.html" class="category-link category-supervivencia">Supervivencia</a></li>
-    </ul>
+    <main>
+            <nav class="cards">
+                <ul>
+                        <li><a href="accion.html" class="card-link category-accion"> Action</a></li>
+                        <li><a href="aventura.html" class="card-link category-aventura">Aventura</a></li>
+                        <li><a href="terror.html" class="card-link category-terror">Terror</a></li>
+                        <li><a href="carreras.html" class="card-link category-carreras">Carreras</a></li>
+                        <li><a href="supervivencia.html" class="card-link category-supervivencia">Supervivencia</a></li>
+                </ul>
+            </nav>
+    </main>
     
 </body>
 </html>
