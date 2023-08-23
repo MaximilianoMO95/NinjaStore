@@ -9,29 +9,61 @@
         <title>Registrarse</title>
 
         <style>
+                .container {
+                        display: grid;
+                        grid-template-columns: repeat(6, 1fr);
+                        border-radius: 0.45rem;
+                        gap: 2rem;
+                }
+
+                h1 { text-align: center; }
+
+                .form-banner {
+                        grid-row: 2;
+                        grid-column: 1 / 3;
+                        background-image: url("img/Ghost\ of\ Tsushima\ \(PS4\ 2020\)\ wallpaper.jpg");
+                        background-size: cover;
+                        background-position: center;
+                        border-radius: 0.3rem;
+
+                        height: 100%;
+                }
+
                 form {
+                        grid-row: 2;
+                        grid-column: 3 / 7;
                         display: flex;
                         flex-direction: column;
-                        width: 80%;
                         gap: 1rem;
+                        margin-top: 2rem;
+                }
+
+
+                @media (max-width: 768px) {
+                        form {
+                                grid-column: 1 / 7;
+                        }
+
+                        .form-banner { display: none;}
                 }
         </style>
 </head>
 
 <body>
         <main>
-                <div class="container border">
-                        <h1> Registrate </h1>
+                <div class="container">
+                        <div class="form-banner"></div>
 
                         <form id="registration-form">
+                                <h1> Registrate </h1>
                                 <label for="full-name">Nombre Completo:</label>
-                                <input type="text" id="full-name" name="full-name" required>
+                                <input type="text" id="full-name" name="full-name" placeholder="Juanito Perez" required>
 
                                 <label for="username">Nombre De Usuario:</label>
-                                <input type="text" id="username" name="username" required>
+                                <input type="text" id="username" name="username" placeholder="DragonSlayer" required>
 
                                 <label for="email">Email:</label>
-                                <input type="email" id="email" name="email" required>
+                                <input type="email" id="email" name="email" placeholder="Juanito@gmail.com" required>
 
                                 <label for="password">Contraseña:</label>
                                 <input type="password" id="password" name="password" minlength="6" maxlength="18" required>
@@ -44,7 +76,7 @@
 
 
                                 <label for="shipping-address">Direccion de envio:</label>
-                                <input type="text" id="shipping-address" name="shipping-address">
+                                <input type="text" id="shipping-address" name="shipping-address" placeholder="Avenida Siempre Viva 181">
 
                                 <br>
                                 <input type="submit" value="Registrarse">
