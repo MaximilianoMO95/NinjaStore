@@ -28,10 +28,6 @@ html {
   scroll-behavior: smooth;
 }
 
-main {
-  min-height: calc(100vh - 2rem);
-}
-
 ul, nav, div, header, main, footer, body, section {
   box-sizing: border-box;
   padding: 0;
@@ -95,6 +91,7 @@ input,
 select {
   font-family: inherit;
   font-size: inherit;
+  width: 100%;
 }
 
 button {
@@ -128,12 +125,6 @@ select {
   box-sizing: border-box;
 }
 
-input:is([type="email"], [type="text"], [type="password"]) {
-  border: 0;
-  border-radius: 0;
-  border-left: 2px solid var(--fg-2);
-}
-
 input:is([type="submit"], [type="reset"]):hover {
   border-color: var(--link-hover);
   color: var(--link);
@@ -160,20 +151,17 @@ footer > a {
 }
 
 /************ Helpers ************/
-.container {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  align-items: center;
-  justify-content: center;
-  border-radius: 0.45rem;
-  gap: 2rem;
-
-  min-height: var(--min-height);
-}
-
 .border {
   border-radius: 0.3rem;
   border: 2px solid var(--bg-2);
+}
+
+.min-vh-100 {
+        height: var(--min-height);
+}
+
+.text-align-center {
+        text-align: center;
 }
 
 .flex-row {
