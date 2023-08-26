@@ -13,16 +13,16 @@
   <style>
     .form-container {
       background: var(--bg-2);
-      border-radius: 0.6rem;
+      border-radius: var(--border-radius);
     }
 
-    .login-container {
+    .login-btn-container {
       display: flex;
       flex-direction: column;
       gap: 0.8rem;
     }
 
-    .login-container > a {
+    .login-btn-container > a {
       font-size: 0.9rem;
       align-self: flex-end;
     }
@@ -30,8 +30,7 @@
 </head>
 
 <body>
-  <main>
-    <div class="container">
+  <main class="contaier">
       <div class="row justify-content-center align-items-center min-vh-100">
         <div class="form-container col-lg-4 col-md-6">
           <form id="registration-form" class="row gy-4 p-5">
@@ -48,14 +47,13 @@
                 required>
             </div>
 
-            <div class="login-container">
+            <div class="login-btn-container">
               <input type="submit" value="Iniciar Sesion">
-              <a href="recover_password.html">recuperar contraseña</a>
+              <a href="recover-password.html">recuperar contraseña</a>
             </div>
           </form>
         </div>
       </div>
-    </div>
   </main>
 
 </body>
