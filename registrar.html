@@ -9,39 +9,29 @@
         <title>Registrarse</title>
 
         <style>
-                .container {
-                        display: grid;
-                        grid-template-columns: repeat(6, 1fr);
-                        border-radius: 0.45rem;
-                        gap: 2rem;
-                }
-
                 h1 { text-align: center; }
 
                 .form-banner {
-                        grid-row: 2;
-                        grid-column: 1 / 3;
+                        grid-column: 2 / 6;
                         background-image: url("img/Ghost\ of\ Tsushima\ \(PS4\ 2020\)\ wallpaper.jpg");
                         background-size: cover;
                         background-position: center;
                         border-radius: 0.3rem;
 
-                        height: 100%;
+                        height: 90%;
                 }
 
                 form {
-                        grid-row: 2;
-                        grid-column: 3 / 7;
+                        grid-column: 6 / 12;
                         display: flex;
                         flex-direction: column;
                         gap: 1rem;
                         margin-top: 2rem;
                 }
 
-
                 @media (max-width: 768px) {
                         form {
-                                grid-column: 1 / 7;
+                                grid-column: 1 / 12;
                         }
 
                         .form-banner { display: none;}
@@ -66,10 +56,10 @@
                                 <input type="email" id="email" name="email" placeholder="Juanito@gmail.com" required>
 
                                 <label for="password">Contraseña:</label>
-                                <input type="password" id="password" name="password" minlength="6" maxlength="18" required>
+                                <input type="password" id="password" name="password" placeholder="Password" minlength="6" maxlength="18" required>
 
                                 <label for="confirm-password">Confirmar Contraseña:</label>
-                                <input type="password" id="confirm-password" name="confirm-password" minlength="6" maxlength="18" required>
+                                <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm Password" minlength="6" maxlength="18" required>
 
                                 <label for="birthdate">Fecha De Nacimiento:</label>
                                 <input type="date" id="birthdate" name="birthdate" required>
