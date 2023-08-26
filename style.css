@@ -14,16 +14,22 @@
     'Open Sans', 'Helvetica Neue', sans-serif;
   --font-mono: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'JetBrains Mono',
     'DejaVu Sans Mono', monospace;
+  --min-height: calc(100vh - 2rem);
+
   background: var(--bg-1);
   color: var(--fg-1);
   font-family: var(--font);
   line-height: 1.5;
   margin: 1rem;
-  height: calc(100vh - 2rem);
+  min-height: var(--min-height);
 }
 
 html {
   scroll-behavior: smooth;
+}
+
+main {
+  min-height: calc(100vh - 2rem);
 }
 
 ul, nav, div, header, main, footer, body, section {
@@ -155,13 +161,14 @@ footer > a {
 
 /************ Helpers ************/
 .container {
-  display: flex;
-  padding: 2rem;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
   align-items: center;
+  justify-content: center;
+  border-radius: 0.45rem;
+  gap: 2rem;
 
-  width: 100%;
-  height: auto;
+  min-height: var(--min-height);
 }
 
 .border {
@@ -288,6 +295,15 @@ nav.cards > ul > li {
   transform: scale(1.15);
   filter: opacity(1);
 }
+
+.avatar {
+        border-radius: 100%;
+        object-fit: cover;
+
+        width: 65px;
+        height: 65px;
+}
+
 
 /******** Estilos Lista De Juegos *************/
 ul.games-list {
