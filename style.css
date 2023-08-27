@@ -3,6 +3,7 @@
   --bg-1: hsl(0, 0%, 100%);
   --bg-2: hsl(206, 20%, 95%);
   --bg-3: hsl(206, 20%, 85%);
+  --bg-glass: hsla(206, 20%, 95%, 0.69);
   --fg-1: hsl(0, 0%, 13%);
   --fg-2: hsl(0, 0%, 20%);
   --fg-3: hsl(170, 68%, 36%);
@@ -22,6 +23,21 @@
   line-height: 1.5;
   margin: 1rem;
   min-height: var(--min-height);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-1: hsl(0, 0%, 6%);
+    --bg-2: hsl(0, 0%, 12%);
+    --bg-3: hsl(0, 0%, 17%);
+    --bg-glass: hsla(0, 0%, 12%, 0.69);
+    --fg-1: hsl(0, 0%, 90%);
+    --fg-2: hsl(0, 0%, 70%);
+    --fg-3: hsl(171, 68%, 67%);
+    --link: hsl(206, 96%, 72%);
+    --link-hover: hsl(206, 96%, 78%);
+    --link-active: hsl(206, 96%, 64%);
+  }
 }
 
 html {
@@ -120,14 +136,25 @@ input,
 textarea,
 select {
   padding: 0.5rem;
-  border: 2px solid var(--bg-2);
+  border: 1px solid var(--bg-2);
   border-radius: var(--border-radius);
   box-sizing: border-box;
 }
 
 input:is([type="submit"], [type="reset"]):hover {
-  border-color: var(--link-hover);
-  color: var(--link);
+  background: var(--link);
+  color: var(--bg-1);
+}
+
+input:is([type="email"], [type="text"], [type="password"]) {
+  outline: none;
+  border: 0;
+  border-radius: 0;
+  border-left: 2px solid var(--fg-2);
+}
+
+input:is([type="email"], [type="text"], [type="password"]):focus {
+  border-left: 2px solid var(--link-active);
 }
 
 input,
@@ -176,6 +203,20 @@ footer > a {
   color: red;
 }
 
+.glass-container {
+  background: var(--bg-glass);
+  backdrop-filter: blur(10px);
+  border-radius: var(--border-radius);
+}
+
+.filter-invert-100 {
+  filter: invert(100%)
+}
+
+.position-relative {
+  position: relative;
+}
+
 .link-btn {
   display: inline-block;
   background: var(--bg-2);
@@ -187,21 +228,7 @@ footer > a {
 
 .link-btn:hover {
   color: var(--bg-1);
-  background: var(--link-hover);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg-1: hsl(0, 0%, 6%);
-    --bg-2: hsl(0, 0%, 12%);
-    --bg-3: hsl(0, 0%, 17%);
-    --fg-1: hsl(0, 0%, 90%);
-    --fg-2: hsl(0, 0%, 70%);
-    --fg-3: hsl(171, 68%, 67%);
-    --link: hsl(206, 96%, 72%);
-    --link-hover: hsl(206, 96%, 78%);
-    --link-active: hsl(206, 96%, 64%);
-  }
+  background: var(--fg-1);
 }
 
 @media (max-width: 768px) {
@@ -238,10 +265,20 @@ footer > a {
   text-align: center;
 }
 
-.banner-img {
-  background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 1)), url('img/Ghost of Tsushima (PS4 2020) wallpaper.jpg'); 
-  background-size: contain;
+.banner-bg:before {
+  content: "";
+  position: absolute;
+  background-image:linear-gradient(to top, var(--bg-1), transparent), url('img/Ghost of Tsushima (PS4 2020) wallpaper.jpg'); 
+  background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+  z-index: -1;
 }
 
 /************ Estilos Menus ************/
