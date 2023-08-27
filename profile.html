@@ -37,39 +37,6 @@
             </div>
         </div>
     </main>
-    
-    <script type="module">
-        async function fetchUser(_userName) {
-            const fakeEndpoint = "/test_data/users.json";
-
-            try {
-                const res = await fetch(fakeEndpoint);
-                if (!res.ok) {
-                    console.error("user not founded");
-                }
-
-                const data = await res.json();
-                return data[0]; // return first user for the moment
-
-            } catch(err) {
-                console.error(err.message);
-            }
-        }
-
-        window.addEventListener("load", async (event) => {
-            try {
-                const userNameElem = document.getElementById("user-name");
-                const avatarElem = document.getElementById("avatar");
-
-                const user = await fetchUser("fake user name");
-
-                avatarElem.src = user["img_url"];
-                userNameElem.textContent = user["username"];
-            } catch (err) {
-                console.error(err.message);
-            }
-        });
-    </script>
 </body>
 
 </html>
