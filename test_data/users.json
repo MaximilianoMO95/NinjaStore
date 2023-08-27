@@ -1,0 +1,26 @@
+[
+  {
+    "username": "alice",
+    "password": "Password123",
+    "img_url":  "img/JohnWick.jpg",
+    "roles": ["user"]
+  },
+  {
+    "username": "bob",
+    "password": "Secure456",
+    "img_url":  "img/JohnWick.jpg",
+    "roles": ["user", "admin"]
+  },
+  {
+    "username": "charlie",
+    "password": "s3cr3tP@ss",
+    "img_url":  "img/JohnWick.jpg",
+    "roles": ["user"]
+  },
+  {
+    "username": "diana",
+    "password": "myP@ssw0rd",
+    "img_url":  "img/JohnWick.jpg",
+    "roles": ["user"]
+  }
+]
