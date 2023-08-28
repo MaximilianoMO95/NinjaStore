@@ -21,7 +21,6 @@ export function validatePassword(password) {
                 return "contraseña debe contener una letra mayuscula y un numero.";
         }
 
-
         return "";
 }
 
