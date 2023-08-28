@@ -244,7 +244,7 @@ footer > a {
 /********** Estilos del encabezado **********/
 .banner {
   display: flex;
-  background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 1)), url('img/Ghost of Tsushima (PS4 2020) wallpaper.jpg'); 
+  background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 1)), url('/img/Ghost of Tsushima (PS4 2020) wallpaper.jpg'); 
   background-size: cover;
   background-position: center;
 
@@ -268,7 +268,7 @@ footer > a {
 .banner-bg:before {
   content: "";
   position: absolute;
-  background-image:linear-gradient(to top, var(--bg-1), transparent), url('img/Ghost of Tsushima (PS4 2020) wallpaper.jpg'); 
+  background-image:linear-gradient(to top, var(--bg-1), transparent), url('/img/Ghost of Tsushima (PS4 2020) wallpaper.jpg'); 
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
