@@ -231,6 +231,16 @@ footer > a {
   background: var(--fg-1);
 }
 
+.icon-svg, .icon-svg > svg {
+  fill: var(--link);
+  width: 36px;
+  height: 36px;
+}
+
+.icon-svg:hover, .icon-svg > svg:hover {
+  fill: var(--link-hover);
+}
+
 @media (max-width: 768px) {
     h1 {
         font-size: 1.5rem;
